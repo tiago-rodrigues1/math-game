@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    background-color: #363B4E;
+    color: #f7f7f7;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    padding: 2.5rem;
+    color: #927FBF;
+    font-size: 1.5rem;
+}
