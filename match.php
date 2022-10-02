@@ -1,3 +1,12 @@
+<?php 
+    $number1 = rand(1, 99);
+    $number2 = rand(1, 99);
+
+    $result = $number1 + $number2;
+
+    $_POST["result"] = $result;
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -17,19 +26,25 @@
         <h4 id="game-mode">Modo de jogo: Adição</h4>
     </header>
     <main>
-        <form action="">
+        <form method="post" action="result.php">
             <div class="operation-container">
-                <span>1</span>
-                <span>+</span>
-                <span>2</span>
+                <span>
+                    <?php echo $number1; ?>
+                </span>
+                <span>
+                    +
+                </span>
+                <span>
+                <?php echo $number2; ?>
+                </span>
             </div>
 
             <div class="response-container">
-                <input type="text" placeholder="Sua resposta">
+                <input type="text" placeholder="Sua resposta" name="response" require>
+                <input type="hidden" name="result" value="<?php echo $result; ?>">
                 <button type="submit">Submeter</button>
             </div>
         </form>
     </main>
 </body>
-
 </html>
