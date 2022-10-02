@@ -1,3 +1,26 @@
+<?php 
+    $userResponse = "";
+    if(isset($_POST["response"])) {
+        $userResponse = $_POST["response"]; 
+    }
+    
+    $result = "";
+    if(isset($_POST["result"])) {
+        $result = $_POST["result"]; 
+    }
+    
+    $pathImage = "";
+    $message = "";
+
+    if ($userResponse == $result) {
+        $pathImage = "./images/win-img.svg";
+        $message = "Parabéns! Você acertou!";
+    } else {
+        $pathImage = "./images/fail-img.svg";
+        $message = "Não foi dessa vez!";
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -12,8 +35,8 @@
 <body>
     <div class="container">
         <div class="result">
-            <img src="./images/undraw_game_day_ucx9.svg" alt="">
-            <h1>Parabéns! Você acertou!</h1>
+            <img src="<?php echo $pathImage; ?>" alt="">
+            <h1><?php echo $message; ?></h1>
         </div>
 
         <button>Jogar novamente</button>
