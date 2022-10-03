@@ -28,7 +28,7 @@
         <h4 id="game-mode">Modo de jogo: <?php echo $operation->name; ?></h4>
     </header>
     <main>
-        <form method="post" action="result.php">
+        <form method="post" action="result.php?op=<?php echo $operation->opCode; ?>">
             <div class="operation-container">
                 <span>
                     <?php echo $number1; ?>
