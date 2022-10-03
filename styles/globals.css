@@ -23,3 +23,10 @@ header {
     color: #927FBF;
     font-size: 1.5rem;
 }
+
+@media (max-width: 768px) {
+    header {
+        padding: 1.5rem;
+        font-size: 1.125rem;
+    }
+}

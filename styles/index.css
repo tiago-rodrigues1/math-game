@@ -45,3 +45,24 @@ li a {
 li a:hover {
     text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+    #logo {
+        font-size: 2rem;
+    }
+    main {
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+        padding: 1.5rem;
+    }
+
+    img {
+        width: 40%;
+        height: 40%;
+    }
+
+    nav {
+        max-width: 100%;
+    }
+}

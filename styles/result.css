@@ -1,9 +1,13 @@
 .container {
     width: 100%;
     height: 100%;
-
+    padding: 1.5rem;
     display: grid;
     place-items: center;
+}
+
+h1 {
+    font-size: 2rem;
 }
 
 .result {
@@ -54,4 +58,10 @@ a#back-home {
 
 a#back-home:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    a#new-game {
+        width: 100%;
+    }
 }
