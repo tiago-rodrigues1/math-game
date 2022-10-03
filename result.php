@@ -1,12 +1,17 @@
 <?php 
     $userResponse = "";
-    if(isset($_POST["response"])) {
+    if (isset($_POST["response"])) {
         $userResponse = $_POST["response"]; 
     }
     
     $result = "";
-    if(isset($_POST["result"])) {
+    if (isset($_POST["result"])) {
         $result = $_POST["result"]; 
+    }
+
+    $op = "";
+    if (isset($_GET["op"])) {
+        $op = $_GET["op"];
     }
     
     $pathImage = "";
@@ -29,8 +34,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultado</title>
 
-    <link rel="stylesheet" href="styles/globals.css">
-    <link rel="stylesheet" href="styles/result.css">
+    <link rel="stylesheet" href="./styles/globals.css">
+    <link rel="stylesheet" href="./styles/result.css">
 </head>
 <body>
     <div class="container">
@@ -39,7 +44,10 @@
             <h1><?php echo $message; ?></h1>
         </div>
 
-        <button>Jogar novamente</button>
+        <div class="options">
+            <a href="match.php?op=<?php echo $op; ?>" id="new-game">Jogar novamente</a>
+            <a href="index.php" id="back-home">Escolher outro modo</a>
+        </div>
     </div>
 </body>
 </html>
