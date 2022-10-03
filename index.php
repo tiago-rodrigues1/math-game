@@ -21,16 +21,16 @@
             <h2>Selecione um modo de jogo</h2>
             <ul>
                 <li>
-                    <a href="match.php">Adição</a>
+                    <a href="match.php?op=ad">Adição</a>
                 </li>
                 <li>
-                    <a href="match.php">Subtração</a>
+                    <a href="match.php?op=sb">Subtração</a>
                 </li>
                 <li>
-                    <a href="match.php">Multiplicação</a>
+                    <a href="match.php?op=mt">Multiplicação</a>
                 </li>
                 <li>
-                    <a href="match.php">Divisão</a>
+                    <a href="match.php?op=dv">Divisão</a>
                 </li>
             </ul>
         </nav>
