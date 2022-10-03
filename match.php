@@ -1,10 +1,12 @@
-<?php 
+<?php
+    include "./classes/Operation.php";
+
     $number1 = rand(1, 99);
     $number2 = rand(1, 99);
 
-    $result = $number1 + $number2;
-
-    $_POST["result"] = $result;
+    if (isset($_GET["op"])) {
+        $operation = new Operation($_GET["op"]);
+    }
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +25,7 @@
 <body>
     <header>
         <h1>Math Game</h1>
-        <h4 id="game-mode">Modo de jogo: Adição</h4>
+        <h4 id="game-mode">Modo de jogo: <?php echo $operation->name; ?></h4>
     </header>
     <main>
         <form method="post" action="result.php">
@@ -32,16 +34,16 @@
                     <?php echo $number1; ?>
                 </span>
                 <span>
-                    +
+                    <?php echo $operation->sign ?>
                 </span>
                 <span>
-                <?php echo $number2; ?>
+                    <?php echo $number2; ?>
                 </span>
             </div>
 
             <div class="response-container">
                 <input type="text" placeholder="Sua resposta" name="response" require>
-                <input type="hidden" name="result" value="<?php echo $result; ?>">
+                <input type="hidden" name="result" value="<?php echo $operation->getResult($number1, $number2); ?>">
                 <button type="submit">Submeter</button>
             </div>
         </form>
