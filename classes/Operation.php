@@ -1,6 +1,6 @@
 <?php 
     class Operation {
-        private $opCode;
+        public $opCode;
         public $name;
         public $sign;
     
