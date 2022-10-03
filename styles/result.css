@@ -19,7 +19,16 @@ img {
     height: 50%;
 }
 
-button {
+.options {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+a#new-game {
     background-color: #927FBF;
     color: #f7f7f7;
     border-radius: .5rem;
@@ -29,8 +38,20 @@ button {
     font-weight: bold;
     cursor: pointer;
     transition: 200ms;
+    text-decoration: none;
+    text-align: center;
 }
 
-button:hover {
+a#new-game:hover {
     filter: brightness(.9);
+}
+
+a#back-home {
+    text-decoration: none;
+    color: #C4BBF0;
+    display: block;
+}
+
+a#back-home:hover {
+    text-decoration: underline;
 }
